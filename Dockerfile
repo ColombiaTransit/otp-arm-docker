@@ -5,4 +5,4 @@ ADD https://github.com/opentripplanner/OpenTripPlanner/releases/download/v2.2.0/
 ADD https://download.geofabrik.de/south-america/colombia-latest.osm.pbf /var/opentripplanner
 ADD https://storage.googleapis.com/gtfs-estaticos/GTFS-2023-10-01.zip /var/opentripplanner
 EXPOSE 8080
-CMD ["java", "-jar", "/opt/app/otp-2.2.0-shaded.jar", "--build", "--serve", "/var/opentripplanner" ]
+CMD ["java", "-Xmx8G", "-jar", "/opt/app/otp-2.2.0-shaded.jar", "--build", "--serve", "/var/opentripplanner" ]
