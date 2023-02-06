@@ -32,6 +32,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
+          push: true
           platforms: linux/arm64, linux/amd64
           tags: mvanlaar/otp-arm-docker:${{ env.DATE }}
           
